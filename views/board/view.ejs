@@ -1,0 +1,24 @@
+<%- include('../inc/head.ejs') %>
+<%- include('../inc/header.ejs') %>
+<div class="form-wrapper wrapper">
+  <%- include('../inc/title-bar.ejs') %>
+  <form action="/board/form" method="POST" name="saveForm">
+    <table>
+      <tr>
+        <td>번호</td>
+        <td><input type="text" name="userId" value="<%= board.id %>"></td>
+      </tr>
+      <tr>
+        <td>아이디</td>
+        <td><input type="text" name="userId" value="<%= board.userId %>"></td>
+      </tr>
+      <tr>
+        <td>내용</td>
+        <td><input type="text" name="content" value="<%= board.content %>"></td>
+      </tr>
+    </table>
+    <button class="btn btn-primary">수정</button>
+    <button class="btn btn-danger" type="reset">리셋</button>
+  </form>
+</div>
+<%- include('../inc/foot.ejs') %>
